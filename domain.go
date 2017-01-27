@@ -65,10 +65,15 @@ type DomainInterfaceModel struct {
 	Type string `xml:"type,attr"`
 }
 
+type DomainInterfaceSource struct {
+	Network string `xml:"network,attr"`
+}
+
 type DomainInterface struct {
-	Type  string                `xml:"type,attr,omitempty"`
-	MAC   *DomainInterfaceMAC   `xml:"mac"`
-	Model *DomainInterfaceModel `xml:"model"`
+	Type   string                 `xml:"type,attr,omitempty"`
+	MAC    *DomainInterfaceMAC    `xml:"mac"`
+	Model  *DomainInterfaceModel  `xml:"model"`
+	Source *DomainInterfaceSource `xml:"source"`
 }
 
 type DomainChardev struct {

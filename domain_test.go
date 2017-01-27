@@ -321,6 +321,9 @@ var domainTestData = []struct {
 						Model: &DomainInterfaceModel{
 							Type: "virtio",
 						},
+						Source: &DomainInterfaceSource{
+							Network:"default",
+						},
 					},
 				},
 			},
@@ -332,6 +335,7 @@ var domainTestData = []struct {
 			`    <interface type="network">`,
 			`      <mac address="00:11:22:33:44:55"></mac>`,
 			`      <model type="virtio"></model>`,
+			`      <source network="default"></source>`,
 			`    </interface>`,
 			`  </devices>`,
 			`</domain>`,
